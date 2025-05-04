@@ -27,43 +27,6 @@ const Works = () => {
               เว็บไซต์อ่านบทความสำหรับผู้สูงอายุ
             </WorkGridItem>
           </Section>
-          <Section delay={0.4}>
-            <WorkGridItem
-              id="Spotify-clone"
-              title="Spotify"
-              thumbnail={thumbSpotify}
-            >
-              Cloning Spotify using Swift 5 / Spotify API
-            </WorkGridItem>
-          </Section>
-          <Section delay={0.5}>
-            <WorkGridItem
-              id="Lineman-clone"
-              title="Lineman"
-              thumbnail={thumbLineman}
-            >
-              Cloning Lineman using Swift 5
-            </WorkGridItem>
-          </Section>
-          <Section delay={0.6}>
-            <WorkGridItem
-              id="RuammitLMS"
-              title="RuammitLMS"
-              thumbnail={thumbLMS}
-            >
-              The E-Learning Management System Platform
-            </WorkGridItem>
-          </Section>
-          <Section delay={0.8}>
-            <WorkGridItem
-              id="Orange-classification"
-              title="Orange Classification"
-              thumbnail={thumbOrange}
-            >
-              Classification of the confused orange fruits <br />
-              by Deep learning
-            </WorkGridItem>
-          </Section>
         </SimpleGrid>
       </Container>
     </Layout>

@@ -10,14 +10,16 @@ import {
   List,
   ListItem,
   Link,
-  Icon
+  Icon,
+  Flex,
 } from '@chakra-ui/react';
 import Section from '../components/section';
 import Paragraph from '../components/paragraph';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import Layout from '../components/layouts/article';
 import { BioSection, BioYear } from '../components/bio';
-import { IoLogoGithub } from 'react-icons/io5';
+import { IoLogoGithub, IoLogoLinkedin, IoDocumentTextOutline } from 'react-icons/io5';
+import { motion } from 'framer-motion';
 
 const Page = () => {
   return (
@@ -62,48 +64,48 @@ const Page = () => {
             Work
           </Heading>
           <Paragraph>
-            I make a goal to create software with the user in mind, creating
-            applications with a usable and intuitive user interface experience.
-            I also understand the importance of creating highly readable and
-            easily maintainable source code. I am constantly striving to learn
-            new technologies and look for ways to better myself in this rapidly
-            changing industry.
+            I love building fast, scalable apps for both web and mobile platforms. I have a knack for creating modern architecture and making applications run smoothly. I enjoy mentoring fellow developers, facilitating tech discussions, and championing quality code and design practices.
           </Paragraph>
-          <Box align="center" my={4}>
-            <NextLink href="/works">
-              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-                My portfolio
-              </Button>
-            </NextLink>
-          </Box>
         </Section>
+        <Flex justify="center">
+          <motion.div
+                whileHover={{ y: -2, boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.1)" }}
+                transition={{ duration: 0.2 }}
+          >
+            <Button
+                as="a"
+                href="/Paratthakorn_Sribunyong_Resume.pdf"
+                download="Paratthakorn_Sribunyong_Resume.pdf"
+                rightIcon={<ChevronRightIcon />}
+                leftIcon={<Icon as={IoDocumentTextOutline} />}
+                size="lg"
+                colorScheme="teal"
+                variant="solid"
+                boxShadow="md"
+                _hover={{
+                  transform: 'translateY(-2px)',
+                  boxShadow: 'lg',
+                }}
+                _active={{
+                  transform: 'translateY(0)',
+                  boxShadow: 'sm',
+                }}
+                transition="all 0.2s"
+              >
+                Download Resume
+              </Button>
+            </motion.div>
+        </Flex>
         <Section delay={0.3}>
           <Heading as="h2" variant="section-title">
             Bio
           </Heading>
           <BioSection>
-            <BioYear>May 2022 - Dec 2022</BioYear>
-            iOS Developer (Internship),{' '} 
-            <Link href="https://lineman.line.me/">
-              <b>LINE MAN Wongnai</b>
+            <BioYear>Apr 2024 - Now</BioYear>
+            iOS Developer, {' '}
+            <Link href="https://www.arise.tech/"> 
+              <b>Arise by Infinitas</b>
             </Link>
-            .
-          </BioSection>
-          <BioSection>
-            <BioYear>Oct 2021 - Feb 2023</BioYear>
-            Frontend Developer (Part Time),{' '}
-            <Link href="https://xn--b3cai3g4cd.com/">
-              <b>ชาญชรา.com</b>
-            </Link>
-            .
-          </BioSection>
-          <BioSection>
-            <BioYear>Jan 2019 - Apr 2023</BioYear>
-            Bachelor of Computer Engineering, {' '} 
-            <Link href="https://www.kmitl.ac.th/"> 
-              <b>KMITL</b>
-            </Link>
-            {' '}(GPA: 3.45)
           </BioSection>
           <BioSection>
             <BioYear>Apr 2023 - Mar 2024</BioYear>
@@ -113,11 +115,26 @@ const Page = () => {
             </Link>
           </BioSection>
           <BioSection>
-            <BioYear>Apr 2024 - Now</BioYear>
-            iOS Developer, {' '}
-            <Link href="https://www.arise.tech/"> 
-              <b>Arise by Infinitas</b>
-            </Link>.
+            <BioYear>May 2022 - Dec 2022</BioYear>
+            iOS Developer (Internship),{' '} 
+            <Link href="https://lineman.line.me/">
+              <b>LINE MAN Wongnai</b>
+            </Link>
+          </BioSection>
+          <BioSection>
+            <BioYear>Oct 2021 - Feb 2023</BioYear>
+            Frontend Developer (Part Time), {' '} 
+            <Link href="https://www.facebook.com/CUInterofficial/"> 
+              <b>CU ISA</b>
+            </Link>
+          </BioSection>
+          <BioSection>
+            <BioYear>Jan 2019 - Apr 2023</BioYear>
+            Bachelor of Computer Engineering, {' '} 
+            <Link href="https://www.kmitl.ac.th/"> 
+              <b>KMITL</b>
+            </Link>
+            {' '}
           </BioSection>
         </Section>
         <Section delay={0.3}>
@@ -130,15 +147,26 @@ const Page = () => {
           <Heading as="h3" variant="section-title">
             On the web
           </Heading>
-          <List>
+          <List> 
             <ListItem>
-              <Link href="https://github.com/clockwick" target="_blank">
+                <Link href="https://www.linkedin.com/in/paratthakorns/" target="_blank">
+                  <Button
+                    variant="ghost"
+                    colorScheme="teal"
+                    leftIcon={<Icon as={IoLogoLinkedin} />}
+                  >
+                    linkedin.com/in/paratthakorns
+                  </Button>
+                </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://github.com/paratthakorns" target="_blank">
                 <Button
                   variant="ghost"
                   colorScheme="teal"
                   leftIcon={<Icon as={IoLogoGithub} />}
                 >
-                  @Clockwick
+                  @paratthakorns
                 </Button>
               </Link>
             </ListItem>
